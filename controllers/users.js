@@ -2,6 +2,7 @@ const User = require('../models/user');
 
 module.exports = {
     index,
+    renderSearch,
 }
 
 function index(req, res, next) {
@@ -20,4 +21,8 @@ function index(req, res, next) {
         name: req.query.name, 
         sortKey });
     });
+  }
+
+  function renderSearch(req, res) {
+    res.render('search.ejs', {user: req.user})
   }

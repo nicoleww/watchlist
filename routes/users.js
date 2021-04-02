@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index.ejs', {user : req.user});
 });
 
+router.get('/search', usersCtrl.renderSearch);
+
 // router.get('/account', usersCtrl.viewAccount);
 // router.get('/new', usersCtrl.addPet);
 

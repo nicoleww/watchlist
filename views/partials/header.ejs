@@ -4,18 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css">
   <title>WatchList</title>
 </head>
 <body>
   <nav>
-    <div>
-    </div>
+    <div class="nav-wrapper">
+    <a href="/">WatchList</a>
     <div class="nav-links">
+      <ul>
+        <li><a href="/users/search">Search</a></li>
+        <li><a href="#">My Watchlists</a></li>
     <% if (user) { %>
-      <a href="/logout" class="login">Log Out</a>
+      <li><a href="/logout" class="login">Log Out</a></li>
     <% } else { %>
-    <a href="/auth/google" class="login">Log In with Google</a>
+    <li><a href="/auth/google" class="login">Login with Google</a></li>
     <% } %>
   </div>
+</ul>
+</div>
   </nav>
   <main>
