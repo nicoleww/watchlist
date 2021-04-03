@@ -9,8 +9,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/search', usersCtrl.renderSearch);
+router.get('/lists', usersCtrl.viewLists);
+router.get('/list/:id', usersCtrl.listDetails);
 
-// router.get('/account', usersCtrl.viewAccount);
-// router.get('/new', usersCtrl.addPet);
+router.post('/new', usersCtrl.newList);
+
 
 module.exports = router;
