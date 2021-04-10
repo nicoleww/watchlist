@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<h4 class="edit-head">Edit List Name:</h4>
+<form action="/users/edit-title/<%= list.id %>" method="POST">
+    <input type="text" name="title" class="save-input">
+    <button type="submit" class="save-btn">Save</button>
+</form>
+
+<div class="edit-list">
+<% for (let movie of list.movies) { %>
+
+    <img src="<%= movie.photo %>">
+
+<% } %>
+</div>
+
+</div>
+<%- include('partials/footer') %>

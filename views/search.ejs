@@ -1,8 +1,10 @@
 <%- include('partials/header') %>
 
-<form method="GET" action="#">
-    <input type="text">
-    <input type="submit" value="Search">
-</form>
+<div class="container-home">
 
+<form method="GET" action="/users/search/movies" class="search-form">
+    <input type="text" name="title" placeholder="Enter a Move Title">
+    <button type="submit" class="btn"><img src="/images/search-icon.png"></button>
+</form>
+</div>
 <%- include('partials/footer') %>

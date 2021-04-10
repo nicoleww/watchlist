@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<div class="container">
+<div class="result-img">
+<img src="<%= result.Poster %>">
+</div>
+<div class="result-info">
+<p><%= result.Title %> <span>(<%= result.Year %>)</span></p>
+<p>Director: <%= result.Director %></p>
+</div>
+<div class="result-plot">
+<p>"<%= result.Plot %>"</p>
+</div>
+<div class="result-form">
+<form action="/users/add" method="POST">
+    <label for="lists">Add to List?</label>
+    <br />
+    <select name="list">
+    <% for (let list of lists) { %>
+        <option value="<%= list.title %>"><%= list.title %></option>
+    <% } %>
+    </select>
+    <input type="text" name="photo" value="<%= result.Poster %>" class="hide">
+    <input type="text" name="title" value="<%= result.Title %>" class="hide">
+    <input type="text" name="releaseYear" value="<%= result.Year %>" class="hide">
+    <input type="text" name="director" value="<%= result.Director %>" class="hide">
+    <input type="text" name="plot" value="<%= result.Plot %>" class="hide">
+    <button type="submit" value="Add" class="btn"><img src="/images/add-icon.png"></button>
+</form>
+</div>
+<div class="result-back">
+<button><a href="/users/search" class="result-btn">Back to Search</a></button>
+</div>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,5 +1,36 @@
 <%- include('partials/header') %>
 
+<div class="container-acct">
 
+    <div class="list-edit">
+    <h2><%= list.title %></h2>
+    <a href="/users/edit/<%= list.id %>"><img src="/images/edit-icon.png" class="btn-img"></a>
+    </div>
+    <div class="list-flex">
+    <% for (let movie of list.movies) { %>
+
+        <div class="info-movies">
+            <div class="info-pic">
+        <img src="<%= movie.photo %>">
+        </div>
+        <div class="aside-movie">
+            <form action="/users/deletemovie/<%= movie.id %>?_method=DELETE" method="POST">
+                <input type="text" name="movie" value="<%= list.id %>" class="hide">
+                <button type="submit" class="btn-delete"><img src="/images/delete-icon.png"></button>
+            </form>
+            </div>
+        <div class="info-sect">
+        <p class="edit-title"><%= movie.title %></p>
+        <p><%= movie.releaseYear %></p>
+        <p><%= movie.director %></p>
+        </div>
+        <div class="info-plot">
+        <p><%= movie.plot %></p>
+        </div>
+        </div>
+   <% } %>
+</div>
+
+</div>
 
 <%- include('partials/footer') %>

@@ -25,7 +25,7 @@ router.get('/logout', function(req, res){
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {user : req.user});
+  res.render('index.ejs', {user : req.user});
 });
 
 module.exports = router;

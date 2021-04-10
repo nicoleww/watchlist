@@ -9,19 +9,25 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper">
-    <a href="/">WatchList</a>
+    <div class="logo">
+      <img src="/images/film-icon.png">
+      &nbsp;
+      <a href="/">WatchList</a>
+    </div>
     <div class="nav-links">
-      <ul>
-        <li><a href="/users/search">Search</a></li>
-        <li><a href="/users/lists">My Watchlists</a></li>
-    <% if (user) { %>
-      <li><a href="/logout" class="login">Log Out</a></li>
-    <% } else { %>
-    <li><a href="/auth/google" class="login">Login with Google</a></li>
-    <% } %>
-  </div>
-</ul>
-</div>
+      <a href="/">Home</a>
+        <a href="/users/search">Search</a>
+        <a href="/users/lists">My Watchlists</a>
+        <% if (user) { %>
+        <a href="/logout" class="login">Log Out</a>
+        <% } else { %>
+        <a href="/auth/google" class="login">Login with Google</a>
+        <% } %>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
   </nav>
   <main>

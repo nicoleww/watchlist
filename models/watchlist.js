@@ -3,9 +3,11 @@ const Schema = mongoose.Schema;
 
 
 const movieSchema = new Schema({
+    photo: {type: String},
     title: {type: String, required: true},
+    releaseYear: {type: String, required: true},
     director: {type: String, required: true},
-    releaseYear: {type: Number, required: true},
+    plot: {type: String},
 }, {
     timestamps: true,
 });
