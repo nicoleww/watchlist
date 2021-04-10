@@ -9,6 +9,8 @@
 <h2>Screenshots of Mobile</h2>
 <div style="display: inline-block;">
 <img src="https://i.imgur.com/s35SfSb.png">
+  &nbsp;
+  &nbsp;
 <img src="https://i.imgur.com/UBjLHkn.png">
 </div>
 <h2>Technologies</h2>
