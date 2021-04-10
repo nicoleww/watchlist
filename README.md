@@ -28,7 +28,7 @@
 </ul>
 <h2>Getting Started</h2>
 <p>To view the app, please click the link below:</p>
-<a href="#">
+<a href="https://watchlist-the-app.herokuapp.com/">Click Here</a>
 <h2>Next Steps</h2>
 <ul>
 <li>Add more styling to pages for better user experience</li>
